@@ -1,14 +1,13 @@
-package searchingAlgo;
+package Problems;
 
-public class CeilingNumberOfATargetInArray {
-
+public class FloorNumberOFATargetInArray {
     static void main(String[] args) {
         int[] arr = {2,3,5,9,14,16,18};
-        int target=9;
-        System.out.println(ceilingNumber(arr,target));
-    }
+        int target=10;
 
-    static int ceilingNumber(int [] arr, int target){
+        System.out.println(floorNumber(arr,target));
+    }
+    static int floorNumber(int [] arr, int target){
         int start =0;
         int end =arr.length -1;
         while(start<=end){
@@ -28,6 +27,6 @@ public class CeilingNumberOfATargetInArray {
             }
         }
 
-        return start;
+        return end;
     }
 }
