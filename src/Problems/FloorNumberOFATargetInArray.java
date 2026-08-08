@@ -8,6 +8,10 @@ public class FloorNumberOFATargetInArray {
         System.out.println(floorNumber(arr,target));
     }
     static int floorNumber(int [] arr, int target){
+
+        if(target<arr[0])
+            return -1;
+
         int start =0;
         int end =arr.length -1;
         while(start<=end){
