@@ -2,7 +2,7 @@ package Patterns;
 
 public class Pattern {
     static void main(String[] args) {
-        pattern1(4   );
+        pattern2(4   );
     }
 
     static void pattern1(int n)
@@ -16,5 +16,18 @@ public class Pattern {
             System.out.println(" ");
         }
     }
+
+    static void pattern2(int n)
+    {
+        for(int row =1;row<=n;row++)
+        {
+            for(int col=1;col<=n;col++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+
 
 }
