@@ -36,9 +36,20 @@ public class LList {
     public void display(){
         Node temp=head;
         while(temp!=null){
-            System.out.print(temp.value+" ");
+            System.out.print(temp.value+" -> ");
             temp=temp.next;
         }
+        System.out.println("END");
     }
 
+    public void insertLast(int val){
+        if(tail==null){
+            insertFirst(val);
+        }
+        Node node = new Node(val);
+
+        tail.next = node;
+        tail = node;
+        size++;
+    }
 }
