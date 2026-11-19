@@ -10,6 +10,7 @@ public class LMain {
         list.insertFirst(7);
         list.insertLast(2);
         list.insertLast(1);
+        list.insert(100,3);
         list.display();
     }
 }

@@ -1,7 +1,7 @@
 package NumberSystem;
 
 public class SieveOfEratosthenes {
-    static void main(String[] args) {
+   public static void main(String[] args) {
         int n = 40;
         boolean[] primes = new boolean[n+1];
         seive(n, primes);
