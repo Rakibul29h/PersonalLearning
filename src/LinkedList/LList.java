@@ -1,5 +1,7 @@
 package LinkedList;
 
+import org.w3c.dom.Node;
+
 public class LList {
 
     private Node head;
@@ -78,6 +80,51 @@ public class LList {
         Node node = new Node(val,temp.next);
         temp.next = node;
         size++;
+    }
+
+    public int deleteFirst(){
+        int val = head.value;
+        head = head.next;
+        if(head == null){
+            tail=null;
+        }
+        size --;
+        return val;
+    }
+
+
+    public int deleteLast(){
+        if(size<=1)
+            return deleteFirst();
+        Node secondLast = getByIndex(size-2);
+        int val = tail.value;
+        tail=secondLast;
+        tail.next=null;
+        size--;
+        return val;
+    }
+
+    public Node getByIndex (int index){
+        Node node = head;
+        for (int i =0 ;i<index;i++)
+        {
+            node = node.next;
+        }
+        return node;
+    }
+
+    public int deleteByIndex(int index){
+        if(index==0)
+            return deleteFirst();
+        if(index == size-1)
+            return deleteLast();
+
+        Node prev = getByIndex(index-1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        size--;
+        return val;
+
     }
 
 }
