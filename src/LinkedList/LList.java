@@ -127,4 +127,14 @@ public class LList {
 
     }
 
+    public Node find(int Value){
+        Node node = head    ;
+        while(node!=null){
+            if(node.value==Value)
+                return node;
+            node=node.next;
+        }
+        return null ;
+    }
+
 }
