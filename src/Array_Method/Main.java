@@ -10,6 +10,7 @@ public class Main {
         int [] number2 = Arrays.copyOf(numbers,5);
         System.out.println("Numbers full array is "+ Arrays.toString(numbers));
         System.out.println("Number 2 full array is "+ Arrays.toString(number2));
+        System.out.println("Length of the numbers "+ numbers.length);
         number2[3]=2;
         System.out.println(Arrays.equals(numbers,number2));
 
